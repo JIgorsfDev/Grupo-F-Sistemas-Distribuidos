@@ -8,115 +8,174 @@
 
     <title>Sistema A+ Acadêmico</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Sistema A+ Acadêmico</h1>
-        <p>Consulte e acompanhe informações acadêmicas dos estudantes.</p>
-    </header>
+    <div class="layout">
 
-    <main>
+        <aside class="sidebar">
 
-        <section class="painel">
-
-            <h2>Painel acadêmico</h2>
-
-            <div class="indicadores">
-
-                <div class="card">
-                    <h3>Total de estudantes</h3>
-                    <p id="totalEstudantes">0</p>
-                </div>
-
-                <div class="card">
-                    <h3>Estudantes ativos</h3>
-                    <p id="estudantesAtivos">0</p>
-                </div>
-
-                <div class="card">
-                    <h3>Estudantes inativos</h3>
-                    <p id="estudantesInativos">0</p>
-                </div>
-
+            <div class="logo">
+                <h2>Sistema <span>A+</span></h2>
+                <p>Desempenho Acadêmico</p>
             </div>
 
-        </section>
+            <nav class="menu">
 
-        <section class="consulta">
+                <p class="menu-titulo">MENU PRINCIPAL</p>
 
-            <h2>Consulta de estudantes</h2>
+                <a href="#painel" class="menu-item ativo">
+                    <span>Visão geral</span>
+                </a>
 
-            <div class="pesquisa">
-                <input
-                    type="text"
-                    id="campoPesquisa"
-                    placeholder="Pesquisar por nome ou matrícula..."
-                >
+                <a href="#consulta" class="menu-item">
+                    <span>Estudantes</span>
+                </a>
 
-                <button id="btnPesquisar">Pesquisar</button>
+                <p class="menu-titulo">ACADÊMICO</p>
+
+                <a href="#detalhesEstudante" class="menu-item">
+                    <span>Detalhes do estudante</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Sistema A+ Acadêmico</p>
+                <small>IFCE - Campus Tianguá</small>
             </div>
 
-            <div class="filtros">
+        </aside>
 
-                <div>
-                    <label for="filtroCurso">Curso:</label>
 
-                    <select id="filtroCurso">
-                        <option value="">Todos os cursos</option>
-                    </select>
+        <div class="conteudo-principal">
+
+            <header class="topbar">
+
+                <div class="pagina-info">
+                    <h1>Desempenho Acadêmico</h1>
+                    <p>Consulte e acompanhe informações acadêmicas dos estudantes.</p>
                 </div>
 
-                <div>
-                    <label for="filtroSituacao">Situação:</label>
+            </header>
 
-                    <select id="filtroSituacao">
-                        <option value="">Todas as situações</option>
-                        <option value="Ativo">Ativo</option>
-                        <option value="Inativo">Inativo</option>
-                    </select>
-                </div>
 
-                <button id="btnLimpar">Limpar filtros</button>
 
-            </div>
+            <main class="conteudo">
 
-            <div class="tabela-container">
+                <section class="painel" id="painel">
 
-                <table>
+                    <div class="secao-cabecalho">
+                        <h2>Painel acadêmico</h2>
+                        <p>Visão geral dos estudantes cadastrados.</p>
+                    </div>
 
-                    <thead>
-                        <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Curso</th>
-                            <th>Semestre</th>
-                            <th>Situação</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
+                    <div class="indicadores">
 
-                    <tbody id="listaEstudantes">
+                        <div class="card">
+                            <h3>Total de estudantes</h3>
+                            <p id="totalEstudantes">0</p>
+                        </div>
 
-                    </tbody>
+                        <div class="card">
+                            <h3>Estudantes ativos</h3>
+                            <p id="estudantesAtivos">0</p>
+                        </div>
 
-                </table>
+                        <div class="card">
+                            <h3>Estudantes inativos</h3>
+                            <p id="estudantesInativos">0</p>
+                        </div>
 
-            </div>
+                    </div>
 
-        </section>
+                </section>
+                <section class="consulta" id="consulta">
 
-        <section class="detalhes" id="detalhesEstudante">
+                    <div class="secao-cabecalho">
+                        <h2>Estudantes</h2>
+                        <p>Consulte e gerencie as informações dos estudantes.</p>
+                    </div>
+                    <div class="pesquisa">
 
-            <h2>Detalhes do estudante</h2>
+                        <input
+                            type="text"
+                            id="campoPesquisa"
+                            placeholder="Pesquisar por nome ou matrícula..."
+                        >
 
-            <p>Selecione um estudante na tabela para visualizar suas informações.</p>
+                        <button id="btnPesquisar">Pesquisar</button>
 
-        </section>
+                    </div>
 
-    </main>
+                    <div class="filtros">
+
+                        <div class="filtro-grupo">
+                            <label for="filtroCurso">Curso</label>
+
+                            <select id="filtroCurso">
+                                <option value="">Todos os cursos</option>
+                            </select>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <label for="filtroSituacao">Situação</label>
+
+                            <select id="filtroSituacao">
+                                <option value="">Todas as situações</option>
+                                <option value="Ativo">Ativo</option>
+                                <option value="Inativo">Inativo</option>
+                            </select>
+                        </div>
+
+                        <button id="btnLimpar">Limpar filtros</button>
+
+                    </div>
+
+                    <div class="tabela-container">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Matrícula</th>
+                                    <th>Nome</th>
+                                    <th>Curso</th>
+                                    <th>Semestre</th>
+                                    <th>Situação</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="listaEstudantes">
+                              
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <section class="detalhes" id="detalhesEstudante">
+
+                    <div class="secao-cabecalho">
+                        <h2>Detalhes do estudante</h2>
+                        <p>Informações individuais do estudante selecionado.</p>
+                    </div>
+
+                    <p>Selecione um estudante na tabela para visualizar suas informações.</p>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
 
     <script type="module" src="index.js"></script>
 
