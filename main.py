@@ -1,5 +1,14 @@
 import webview
 from pathlib import Path
+from api.client import APIClient
+
+api = APIClient("http://127.0.0.1:8000")
+"""
+Exemplo de uso:
+
+estudantes = api.listar_estudantes()
+print(estudantes)
+"""
 
 frontend = Path(__file__).parent / "Front-end" / "index.html"
 
