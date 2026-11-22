@@ -1,3 +1,12 @@
+import {
+    mediaNotas,
+    percentualFrequencia,
+    situacaoAcademica,
+    relatorioDesempenho,
+    relatorioPorDisciplina,
+    mediaGeralPorEstudante
+} from "./calculo.js";
+
 const estudantes = [];
 
 const campoPesquisa = document.getElementById("campoPesquisa");
