@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema A+ Acadêmico</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema A+ Acadêmico</h1>
+        <p>Consulte e acompanhe informações acadêmicas dos estudantes.</p>
+    </header>
+
+    <main>
+
+        <section class="painel">
+
+            <h2>Painel acadêmico</h2>
+
+            <div class="indicadores">
+
+                <div class="card">
+                    <h3>Total de estudantes</h3>
+                    <p id="totalEstudantes">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Estudantes ativos</h3>
+                    <p id="estudantesAtivos">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Estudantes inativos</h3>
+                    <p id="estudantesInativos">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="consulta">
+
+            <h2>Consulta de estudantes</h2>
+
+            <div class="pesquisa">
+                <input
+                    type="text"
+                    id="campoPesquisa"
+                    placeholder="Pesquisar por nome ou matrícula..."
+                >
+
+                <button id="btnPesquisar">Pesquisar</button>
+            </div>
+
+            <div class="filtros">
+
+                <div>
+                    <label for="filtroCurso">Curso:</label>
+
+                    <select id="filtroCurso">
+                        <option value="">Todos os cursos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filtroSituacao">Situação:</label>
+
+                    <select id="filtroSituacao">
+                        <option value="">Todas as situações</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <button id="btnLimpar">Limpar filtros</button>
+
+            </div>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Nome</th>
+                            <th>Curso</th>
+                            <th>Semestre</th>
+                            <th>Situação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaEstudantes">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="detalhes" id="detalhesEstudante">
+
+            <h2>Detalhes do estudante</h2>
+
+            <p>Selecione um estudante na tabela para visualizar suas informações.</p>
+
+        </section>
+
+    </main>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
